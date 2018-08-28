@@ -20,6 +20,7 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+      console.log("helloooo");
     });
 
     firebase.initializeApp({
@@ -31,15 +32,15 @@ export class MyApp {
     });
 
     const unsubscribe = firebase.auth().onAuthStateChanged(user => {
-      this.rootPage = LoginPage;
 
-      // if (!user) {
-      //   this.rootPage = LoginPage;
-      //   unsubscribe();
-      // } else {
-      //   this.rootPage = HomePage;
-      //   unsubscribe();
-      // }
+      if (!user) {
+        //console.log('helloooo');
+        this.rootPage = LoginPage;
+        unsubscribe();
+      } else {
+        this.rootPage = TabsPage;
+        unsubscribe();
+      }
     });
 
   }

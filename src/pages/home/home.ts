@@ -1,12 +1,11 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController , Tabs, IonicPage, NavParams} from 'ionic-angular';
+import { NavController , Tabs, NavParams} from 'ionic-angular';
 import firebase from 'firebase';
 import {SignupPage} from "../signup/signup";
 import {LoginPage} from "../login/login";
 import {AboutPage} from "../about/about";
 import {ContactPage} from "../contact/contact";
 
-//@IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
