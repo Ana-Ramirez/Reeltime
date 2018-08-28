@@ -12,6 +12,8 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { EmailValidator } from '../../validators/email-validator';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HomePage } from '../home/home';
+import { SignupPage } from '../signup/signup';
+import { ResetPasswordPage } from '../reset-password/reset-password';
 
 /**
  * Generated class for the LoginPage page.
@@ -74,11 +76,11 @@ export class LoginPage {
 
 
   goToSignup(): void {
-    this.navCtrl.push('SignupPage');
+    this.navCtrl.push(SignupPage);
   }
 
   goToResetPassword(): void {
-    this.navCtrl.push('ResetPasswordPage');
+    this.navCtrl.push(ResetPasswordPage);
   }
 
 
